@@ -16,5 +16,17 @@ module.exports = {
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off"
+  },
+  // Eslint不识别“别名”的处理
+  // npm install eslint-plugin-import  eslint-import-resolver-alias --save-dev
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [
+          ['@', './src'],
+        ],
+        extensions: ['.ts', '.js', '.jsx', '.json']
+      }
+    }
   }
 };
