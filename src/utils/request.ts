@@ -4,16 +4,16 @@
  * @author: wangming
  * @Create on: 2020-06-24 09:54:05
  * @ModifyBrief: wangming
- * @LastEditTime: 2020-06-24 10:06:23
+ * @LastEditTime: 2020-06-24 10:33:04
  */
 
-import axios, { AxiosResponse, AxiosRequestConfig } from "axios";
+import axios, { AxiosInstance, AxiosResponse, AxiosRequestConfig } from "axios";
 
 /* baseURL 按实际项目来定义 */
 const baseURL = process.env.VUE_APP_URL;
 
 /* 创建axios实例 */
-const service = axios.create({
+const service: AxiosInstance  = axios.create({
   baseURL,
   timeout: 15000, // 请求超时时间
 });
