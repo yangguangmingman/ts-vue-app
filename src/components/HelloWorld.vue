@@ -15,7 +15,9 @@ import { Component, Prop, Vue, Watch, Emit } from "vue-property-decorator";
   name: "HelloWorld"
 })
 export default class extends Vue {
-  @Prop() private msg!: string;
+  @Prop()
+  private msg!: string;
+
   private count = 1;
 
   get combine() {
